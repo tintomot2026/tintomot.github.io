@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	
+<form>
+	<fieldset style="width: 50%;">
+		<h2>ĐĂNG KÍ THÀNH VIÊN CÂU LẠC BỘ NGOẠI KHÓA</h2>
+		<h2>TRƯỜNG THPT NGUYỄN BỈNH KHIÊM</h2>
+		<table>
+			<tr>
+				<td><label for="hoten">Họ và tên:</label></td>
+				<td><input id="hoten" type="text"></td>
+			</tr>
+			<tr>
+				<td><label for="email">Email:</label></td>
+				<td><input id="email" type="email"></td>
+			</tr>
+			<tr>			
+				<td><label for="ngaysinh">Ngày sinh:</label></td>
+				<td><input id="ngaysinh" type="date"></td>
+			</tr>
+			<tr>
+				<td><label>Giới tính:</label></td>
+				<td>
+				<input id="nam" type="radio" name="gioitinh" value="nam">
+				<label for="nam">Nam</label>
+				<input id="nu" type="radio" name="gioitinh" value="nu">
+				<label for="nu">Nữ</label>
+				</td>
+			</tr>
+			<tr>			
+				<td><label for="diachi">Địa chỉ:</label></td>
+				<td><textarea id="diachi" name="diachi" rows="5" cols="20">
+					</textarea>
+				</td>
+			</tr>
+				<td><label>Học tốt:</label></td>
+				<td>
+				<input type="checkbox" id="toan" name="monthi" value="toan">
+				<label for="toan">Toán</label>
+				<input type="checkbox" id="van" name="monthi" value="van">
+				<label for="van">Văn</label>
+				<input type="checkbox" id="ngoaingu" name="monthi" value="ngoaingu">
+				<label for="ngoaingu">Ngoại ngữ</label></td>
+			</tr>
+			<tr>			
+				<td><label for="hoso">Hồ sơ đính kèm:</label></td>
+				<td><input id="hoso" type="file"></td>
+			</tr>
+			<tr>
+				<td><label for="dk">Đăng kí CLB:</label></td>
+				<td><select id="dk" name="dk">
+					<option value="bc">Bóng chuyền</option>
+					<option value="bd">Bóng đá</option>				
+					<option value="br">Bóng rổ</option>
+					<option value="bl">Bơi lội</option>
+					<option value="cl">Cầu lông</option>
+					<option value="vt">Võ thuật</option>				
+					<option value="an">Âm nhạc</option>
+					<option value="kv">Khiêu vũ</option>
+					<option value="mt">Mĩ thuật</option>
+					<option value="na">Nhiếp ảnh</option>
+				</select>
+				</td>
+			</tr>
+			<tr><td></td>
+				<td ><button style="color: blue; font-weight: bold;" type="submit">Gửi thông tin</button></td>
+			</tr>
+			<tr><td></td>
+				<td ><a href="index.html" class="link">Về trang chủ </a></td>
+			</tr>
+			
+		</table>
+	</fieldset>
+</form>
+</body>
+</html>
