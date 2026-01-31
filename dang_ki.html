@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Đăng Ký / Đóng Góp - Nhân Vật Lịch Sử Việt Nam</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<style>
+		body {
+			background-color: #f5f5f5;
+		}
+		
+		main {
+			max-width: 600px;
+			margin: 2rem auto;
+			padding: 0 1rem;
+		}
+		
+		.form-container {
+			background-color: white;
+			padding: 2rem;
+			border-radius: 10px;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+		}
+		
+		.form-container h2 {
+			color: #b22222;
+			text-align: center;
+			margin-bottom: 0.5rem;
+			font-size: 1.5rem;
+		}
+		
+		.form-container p {
+			text-align: center;
+			color: #666;
+			margin-bottom: 1.5rem;
+			font-size: 0.95rem;
+		}
+		
+		.form-container table {
+			width: 100%;
+			margin: 1rem 0;
+			box-shadow: none;
+		}
+		
+		.form-container table tr {
+			border-bottom: 1px solid #eee;
+		}
+		
+		.form-container table tr:last-child {
+			border-bottom: none;
+		}
+		
+		.form-container table td {
+			padding: 1rem;
+		}
+		
+		.form-container table td:first-child {
+			width: 40%;
+			font-weight: 500;
+			color: #555;
+		}
+		
+		.form-container input[type="text"],
+		.form-container input[type="email"],
+		.form-container input[type="date"],
+		.form-container input[type="file"],
+		.form-container textarea,
+		.form-container select {
+			width: 100%;
+			padding: 0.8rem;
+			border: 1px solid #ddd;
+			border-radius: 5px;
+			font-size: 1rem;
+			font-family: inherit;
+			transition: border-color 0.3s ease;
+		}
+		
+		.form-container input[type="text"]:focus,
+		.form-container input[type="email"]:focus,
+		.form-container input[type="date"]:focus,
+		.form-container input[type="file"]:focus,
+		.form-container textarea:focus,
+		.form-container select:focus {
+			outline: none;
+			border-color: #b22222;
+			box-shadow: 0 0 0 3px rgba(178, 34, 34, 0.06);
+		}
+		
+		.form-container button {
+			background: linear-gradient(135deg, #b22222 0%, #b8860b 100%);
+			color: white;
+			padding: 0.8rem 2rem;
+			border: none;
+			border-radius: 5px;
+			font-size: 1rem;
+			font-weight: bold;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			width: 100%;
+		}
+		
+		.form-container button:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+		}
+		
+		.back-link {
+			text-align: center;
+			margin-top: 1rem;
+		}
+		
+		.back-link a {
+			color: #b22222;
+			text-decoration: none;
+			transition: all 0.3s ease;
+		}
+		
+		.back-link a:hover {
+			color: #b8860b;
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+<header>
+	<div class="banner">
+		<h1>Đăng Ký / Đóng Góp</h1>
+		<p>Nhận bài, tài liệu, hình ảnh để bổ sung tư liệu nhân vật</p>
+	</div>
+	<nav class="tabs-nav">
+		<ul class="tabs-list">
+			<li><a href="index.html" class="tab-link">Trang chủ</a></li>
+			<li><a href="danh_tuong.html" class="tab-link">Danh tướng & nhân vật</a></li>
+			<li><a href="dang_ki.html" class="tab-link active">Đăng ký/Đóng góp</a></li>
+	
+		</ul>
+	</nav>
+</header>
+
+<main>
+	<form>
+		<div class="form-container">
+			<h2>Biểu Mẫu Đóng Góp</h2>
+			<p>Gửi thông tin và tài liệu (ảnh, bài viết) để bổ sung tư liệu cho dự án.</p>
+			
+			<table>
+				<tr>
+					<td><label for="hoten">Họ và tên:</label></td>
+					<td><input id="hoten" type="text" required></td>
+				</tr>
+				<tr>
+					<td><label for="email">Email:</label></td>
+					<td><input id="email" type="email" required></td>
+				</tr>
+				<tr>			
+					<td><label for="ngaysinh">Ngày sinh:</label></td>
+					<td><input id="ngaysinh" type="date" required></td>
+				</tr>
+				<tr>
+					<td><label>Giới tính:</label></td>
+					<td>
+						<input id="nam" type="radio" name="gioitinh" value="nam" required>
+						<label for="nam" style="display: inline; margin-right: 1rem; font-weight: normal;">Nam</label>
+						<input id="nu" type="radio" name="gioitinh" value="nu">
+						<label for="nu" style="display: inline; font-weight: normal;">Nữ</label>
+					</td>
+				</tr>
+				<tr>			
+					<td><label for="diachi">Địa chỉ:</label></td>
+					<td><textarea id="diachi" name="diachi" rows="3"></textarea></td>
+				</tr>
+				<tr>
+					<td><label for="dk">Loại đóng góp:</label></td>
+					<td>
+						<select id="dk" name="dk" required>
+							<option value="">-- Loại đóng góp --</option>
+					<option value="tailieu">Tài liệu tư liệu</option>
+					<option value="hinh_anh">Hình ảnh</option>
+					<option value="bai_viet">Bài viết / Tiểu sử</option>
+					<option value="khac">Khác (mô tả trong phần địa chỉ)</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td><label for="kihoc">Mức ưu tiên:</label></td>
+					<td>
+						<select id="kihoc" name="kihoc" required>
+						<option value="">-- Chọn mức ưu tiên --</option>
+						<option value="binhthuong">Bình thường</option>
+						<option value="quantrong">Quan trọng</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><button type="submit">Gửi đóng góp</button></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td class="back-link"><a href="index.html">← Quay lại trang chủ</a></td>
+				</tr>
+			</table>
+		</div>
+	</form>
+</main>
+
+<footer>
+	<div class="row">
+		<div>
+			<p>📞 Liên lạc</p>
+			<ul>
+				<li>Điện thoại: <strong>0987654321</strong></li>
+			<li><a href="index.html" class="link">Nhân Vật Lịch Sử Việt Nam</a></li>
+			<li><a href="dang_ki.html" class="link">Biểu mẫu đóng góp</a></li>
+			</ul>
+		</div>
+		<div>
+			<p>📝 Đăng ký</p>
+			<ul>
+				<li><a href="index.html" class="link">Trang chủ</a></li>
+
+			</ul>
+		</div>
+		<div>
+			<p>💡 Lợi ích</p>
+			<ul>
+				<li>Phát triển kỹ năng cá nhân</li>
+				<li>Gặp gỡ bạn bè đồng tâm</li>
+				<li>Nhận giải thưởng xuất sắc</li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer-divider"></div>
+	<div class="footer-bottom">
+		<p style="margin: 0; font-weight: normal;">© 2026 Nhân Vật Lịch Sử Việt Nam. Tất cả các quyền được bảo lưu.</p>
+	</div>
+</footer>
+
+<script>
+document.querySelector('form').addEventListener('submit', function(e){
+	e.preventDefault();
+	alert('Cảm ơn! Đóng góp của bạn đã được ghi nhận.');
+	this.reset();
+});
+</script>
+
+</body>
+</html>

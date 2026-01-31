@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Nhân Vật Lịch Sử Việt Nam</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<style>
+		main {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 2rem 1rem;
+		}
+		
+		.intro-section {
+			background-color: white;
+			padding: 3rem 2rem;
+			border-radius: 0;
+			margin-bottom: 2rem;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+			text-align: center;
+		}
+		
+		.intro-section h2 {
+			color: #b22222;
+			font-size: 2rem;
+			margin-bottom: 1.5rem;
+		}
+		
+		.intro-section p {
+			color: #555;
+			font-size: 1rem;
+			line-height: 1.6;
+		}
+		
+		.video-section {
+			background-color: white;
+			padding: 2rem;
+			border-radius: 8px;
+			margin-bottom: 2rem;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+		}
+		
+		.video-section h2 {
+			color: #b22222;
+			font-size: 1.8rem;
+			margin-bottom: 1.5rem;
+			text-align: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 0.5rem;
+		}
+		
+		.video-section h2::before {
+			content: "▶";
+			font-size: 1.5rem;
+		}
+		
+		.video-container {
+			max-width: 100%;
+			margin: 0 auto;
+			background-color: #000;
+			border-radius: 8px;
+			overflow: hidden;
+			box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+		}
+		
+		.video-container video {
+			width: 100%;
+			height: auto;
+			display: block;
+			max-height: 500px;
+		}
+		
+		.video-placeholder {
+			background: linear-gradient(135deg, #b22222 0%, #b8860b 100%);
+			color: white;
+			padding: 3rem 2rem;
+			text-align: center;
+			font-size: 1.1rem;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			min-height: 300px;
+			gap: 1rem;
+		}
+		
+		.video-placeholder strong {
+			font-size: 1.3rem;
+			display: block;
+		}
+		
+		.video-section p {
+			text-align: center;
+			color: #666;
+			margin-top: 1rem;
+			font-size: 0.95rem;
+		}
+		
+		.person-grid, .sports-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+			gap: 2rem;
+			margin-top: 3rem;
+		}
+		
+		.person-card, .sport-card {
+			background: white;
+			border-radius: 8px;
+			overflow: hidden;
+			box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+			transition: all 0.3s ease;
+		}
+		
+		.person-card:hover, .sport-card:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+		}
+		
+		.person-card figure, .sport-card figure {
+			aspect-ratio: 4 / 3;
+			overflow: hidden;
+			margin: 0;
+		}
+		
+		.person-card img, .sport-card img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+		}
+		
+		.person-card-content, .sport-card-content {
+			padding: 1.5rem;
+		}
+		
+		.person-card h3, .sport-card h3 {
+			color: #b22222;
+			margin-bottom: 0.5rem;
+		}
+		
+		.person-card p, .sport-card p {
+			color: #666;
+			font-size: 0.9rem;
+			margin-bottom: 1rem;
+		} 
+	</style>
+</head>
+<body>
+<header>
+	<div class="banner">
+		<h1>Nhân Vật Lịch Sử Việt Nam</h1>
+		<p>Tuyển tập tiểu sử & tư liệu lịch sử</p>
+	</div>
+	<nav class="tabs-nav">
+		<ul class="tabs-list">
+			<li><a href="index.html" class="tab-link active">Trang chủ</a></li>
+			<li><a href="danh_tuong.html" class="tab-link">Danh tướng & nhân vật</a></li>
+			<li><a href="dang_ki.html" class="tab-link">Đăng ký/Đóng góp</a></li>
+	
+		</ul>
+	</nav>
+</header>
+<main>
+	<div class="intro-section">
+		<h2>Chào mừng đến với tuyển tập Nhân Vật Lịch Sử Việt Nam</h2>
+		<p>Kho tư liệu, tiểu sử ngắn và timeline các nhân vật lịch sử tiêu biểu của Việt Nam. Tài liệu phù hợp để tham khảo, học tập và làm báo cáo.</p>
+		<p style="margin-top: 1.5rem; font-weight: bold;">Các chuyên mục nổi bật:</p>
+		<p>Trần Hưng Đạo • Lý Thường Kiệt • Nguyễn Trãi • Hồ Chí Minh</p>
+	</div>
+	
+	<div class="video-section">
+		<h2>Tư liệu Nổi bật (Video / Âm thanh)</h2>
+		<div class="video-container">
+			<!-- HƯỚNG DẪN: Thay đổi src="videos/thethao.mp4" bằng đường dẫn video của bạn -->
+			<!-- Định dạng hỗ trợ: .mp4, .webm, .ogg -->
+			<!-- Ví dụ: src="videos/thethao.mp4" hoặc src="videos/demovideo.mp4" -->
+			<video width="100%" height="auto" controls>
+				<source src="videos/lich_su_vietnam.mp4" type="video/mp4">
+				<div class="video-placeholder">
+				<strong>📹 Tư liệu video chưa sẵn sàng</strong>
+				<p>Vui lòng tải video tư liệu vào thư mục <strong>videos/</strong> và đặt tên tập tin phù hợp (ví dụ: <strong>lich_su_vietnam.mp4</strong>)</p>
+					<p style="font-size: 0.85rem; margin-top: 0.5rem;">Hoặc chỉnh sửa src="" để trỏ đến đường dẫn video của bạn</p>
+				</div>
+			</video>
+		</div>
+		<p>🎬 Xem video này để hiểu thêm về các tư liệu lịch sử và bối cảnh sự kiện</p>
+	</div>
+	
+	<div class="person-grid">
+		<article class="person-card">
+			<figure>
+				<img src="images/nhan_vat/tran_hung_dao.jpg" alt="Trần Hưng Đạo" class="placeholder-img">
+			</figure>
+			<div class="person-card-content">
+				<h3>Trần Hưng Đạo</h3>
+				<p>Quân sư đại tài, người chỉ huy thắng lợi trong kháng chiến chống Nguyên - Mông.</p>
+				<a href="nhan_vat_tran_hung_dao.html" class="btn-read">Xem chi tiết →</a>
+			</div>
+		</article>
+		
+		<article class="person-card">
+			<figure>
+				<img src="images/nhan_vat/ly_thuong_kiet.jpg" alt="Lý Thường Kiệt" class="placeholder-img">
+			</figure>
+			<div class="person-card-content">
+				<h3>Lý Thường Kiệt</h3>
+				<p>Vị tướng, thi nhân, nổi bật với bài thơ "Nam quốc sơn hà" và chiến công chống Tống.</p>
+				<a href="nhan_vat_ly_thuong_kiet.html" class="btn-read">Xem chi tiết →</a>
+			</div>
+		</article>
+		
+		<article class="person-card">
+			<figure>
+				<img src="images/nhan_vat/nguyen_trai.jpg" alt="Nguyễn Trãi" class="placeholder-img">
+			</figure>
+			<div class="person-card-content">
+				<h3>Nguyễn Trãi</h3>
+				<p>Văn thần, nhà chính trị - tư tưởng, đóng góp lớn cho nền độc lập và văn chương Việt Nam.</p>
+				<a href="nhan_vat_nguyen_trai.html" class="btn-read">Xem chi tiết →</a>
+			</div>
+		</article>
+		
+		<article class="person-card">
+			<figure>
+					<img src="images/nhan_vat/ho_chi_minh.jpg" alt="Hồ Chí Minh" class="placeholder-img">
+
+			</figure>
+			<div class="person-card-content">
+				<h3>Hồ Chí Minh</h3>
+				<p>Lãnh tụ vĩ đại của cách mạng Việt Nam, nhà hoạt động chính trị, nhà văn.</p>
+				<a href="nhan_vat_ho_chi_minh.html" class="btn-read">Xem chi tiết →</a>
+			</div>
+		</article>
+	</div>
+</main>
+<footer>
+	<div class="row">
+		<div>
+			<p>📞 Liên lạc</p>
+			<ul>
+				<li>Điện thoại: <strong>0987654321</strong></li>
+			<li><a href="index.html" class="link">Nhân Vật Lịch Sử Việt Nam</a></li>
+			<li><a href="dang_ki.html" class="link">Biểu mẫu đóng góp</a></li>
+			</ul>
+		</div>
+		<div>
+			<p>🏆 Khám phá</p>
+			<ul>
+	
+				<li><a href="dang_ki.html" class="link">Biểu mẫu đóng góp</a></li>
+				</ul>
+		</div>
+		<div>
+			<p>ℹ️ Thông tin</p>
+			<ul>
+				<li>Trường: <strong>THPT Vĩnh Trạch</strong></li>
+				<li>Năm thành lập: <strong>2001
+				</strong></li>
+				<li>Kho tư liệu phong phú</li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer-divider"></div>
+	<div class="footer-bottom">
+		<p style="margin: 0; font-weight: normal;">© 2026 Nhân Vật Lịch Sử Việt Nam. Tất cả các quyền được bảo lưu.</p>
+	</div>
+</footer>
+<script src="scripts.js"></script>
+</body>
+</html>
